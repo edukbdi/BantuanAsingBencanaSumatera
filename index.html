@@ -878,5 +878,12 @@
 
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
+  <script>
+  fetch('https://edukbdi.github.io/header.html')
+    .then(r => r.text())
+    .then(html => {
+      document.body.insertAdjacentHTML('afterbegin', html);
+    });
+</script>
 </body>
 </html>
